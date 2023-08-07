@@ -34,7 +34,11 @@
         area.addEventListener('click', clicar)
         area.addEventListener('mouseenter', entrar)
         area.addEventListener('mouseout', sair)
+        area.addEventListener('mousedown', segurar)
 
+        function segurar() {
+            area.style.background = 'white'
+        }
         function clicar() {
             area.innerText = 'clicou'
             area.style.background = 'blue'
