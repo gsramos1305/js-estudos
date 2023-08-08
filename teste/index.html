@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>teste</title>
-    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1></h1>
-    <h2></h2>
+    <h1>Sistema de Multa</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado">
 
-    <script src="main.js"></script>
+    </div>
+    <script> 
+        function calcular() {
+            var velocidade = document.querySelector('#txtvel')
+            var velocidade = Number(velocidade.value)
+            var resultado = document.querySelector('#resultado')
+            resultado.innerHTML = `<h2>Sua velocidade: ${velocidade}Km/h</h2>`
+            if (velocidade > 60) {
+                resultado.innerHTML += `<h1>Multado!<h1>`
+            }
+            resultado.innerHTML += '<h2>Dirija com segurança!</h2>'
+        }
+    </script>
 </body>
-
 </html>
