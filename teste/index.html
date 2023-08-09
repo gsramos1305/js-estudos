@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Multa</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Multa</h1>
+    <h1>MULTA</h1>
     <input type="number" name="velocidade" id="velocidade">
     <input type="button" value="Verificar" onclick="calcular()">
     <div id="resultado">
@@ -14,17 +14,16 @@
     </div>
 
     <script>
-       function calcular() {
+        function calcular() {
             var velocidade = document.querySelector('input#velocidade')
             var velocidade = Number(velocidade.value)
             var resultado = document.querySelector('div#resultado')
-            resultado.innerHTML = `<h2>Sua velocidade: ${velocidade}Km/h</h2>`          
+            resultado.innerHTML = `<h2>Sua velocidade: ${velocidade}Km/h</h2>`
             if (velocidade > 60) {
-                resultado.innerHTML += `<h1>Multado</h1>`
+                resultado.innerHTML += '<h1>MULTADO</H1>'
             }
-            resultado.innerHTML += '<h3>Dirija com segurança!</h3>'
+            resultado.innerHTML += '<h2>Dirija com segurança!</h2>'
         }
-        
     </script>
 </body>
 </html>
