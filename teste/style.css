@@ -2,3 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top left, #28b497, #7dd56f);
+}
