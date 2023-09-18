@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Multa</h1>
-    <input type="number" name="velocidade" id="velocidade">
-    <input type="button" value="Verificar" onclick="calcular()">
-    <div id="dados">
+<html>
 
+<head>
+    <title>Página com Conteúdo Temporizado</title>
+</head>
+
+<body>
+    <div id="conteudo-inicial">
+        <!-- Conteúdo inicial que será exibido imediatamente -->
+        <h1>Bem-vindo à página!</h1>
+        <p>Este é o conteúdo inicial da página.</p>
+    </div>
+
+    <div id="conteudo-adicional" style="display: none;">
+        <!-- Conteúdo que será exibido após 5 minutos -->
+        <h2>Conteúdo Adicional</h2>
+        <p>Este é o conteúdo que será exibido após 5 minutos na página.</p>
     </div>
 
     <script>
-        function calcular() {
-            var velocidade = document.querySelector('#velocidade')
-            var velocidade = Number(velocidade.value)
-            var dados = document.querySelector('#dados')
-            dados.innerHTML = `<h2>Sua Velocidade: ${velocidade}Km/h</h2>`
-            if (velocidade > 60) {
-                dados.innerHTML += '<h1>Multado!</h1>'
-            }
-            dados.innerHTML += '<h2>Dirija com segurança</h2>'
+        // Função para exibir o conteúdo adicional após 5 minutos
+        function exibirConteudoAdicional() {
+            document.getElementById('conteudo-adicional').style.display = 'block';
         }
+
+        // Agendar a função após 5 minutos (300,000 milissegundos)
+        setTimeout(exibirConteudoAdicional, 3000);
     </script>
 </body>
+
 </html>
